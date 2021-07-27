@@ -1,0 +1,67 @@
+.container-fluid {
+    position: relative;
+    text-align: center;
+    color: linen;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    
+  }
+  .centered {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    font-size: xx-large;
+    font-weight: bold;
+    font-style: italic;
+
+    
+
+  }
+  .para{
+      font-size: medium;
+      font-weight: lighter;
+      margin-top: 15px;
+  }
+  .btn{
+      font-size: large;
+      font-weight: lighter;
+      margin: 10px;
+      border-radius: 50px;
+      
+      
+  }
+  .navbar-brand{
+    margin-left: 30px;
+  }
+  .btn{
+    background-color:blue;
+    color:white;
+  }
+  .btn:hover{
+    background-color:white;
+    color:blue;
+    border-radius: 50px;
+  }
+  #cf{
+    background-color: blue;
+    
+  }
+  .navbar-brand{
+    color: white;
+  }
+  .navbar-brand:hover{
+    color:white;
+  }
+  .bt{
+    color: white;
+  }
+  .bt:hover{
+    background-color: white;
+    color: blue;
+  }
+ 
+ 
+ 
+  
+ 

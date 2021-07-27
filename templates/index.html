@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>NAC Tone Analyzer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+<script src="js/firebase.js"></script>
+ 
+</head>
+<body>
+  <div class="container-fluid" id="cf">
+    <div class="navbar-header">
+      <a class="navbar-brand">NAC TONE ANALYZER</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="SignUp.html" class="bt"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+      <li><a href="Login.html" class="bt"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+
+<div class="container-fluid">
+    <img src="{{url_for('static', filename='banner.jpg')}}" alt="" style="width:100%;" height="400px;">
+    
+    <div class="centered">NAC Tone Analyzer
+        <p class="para">Understand emotions and communication style in text</p>
+
+       <a href="SignUp.html"><button class="btn btn-primary">Get Started</button></a>
+      <a href="emotion.html" ><button class="btn btn-primary">View Demo</button></a>
+    </div>
+  </div>
+  <div class="container">
+    <h1 style="font-style: oblique;">What Is NAC Tone Analyzer?</h1>
+    <p style="font-style: italic; font-size: initial; font-weight: normal;">NAC Tone Analyzer service uses linguistic analysis to detect emotion and language tones in written text. <br>Analyze emotions and tones in what people write online, like tweets or reviews. Predict whether they are<br>happy, sad, confident, and more.</p>
+  </div>  
+</body>
+</html>

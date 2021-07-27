@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>
+    Emotion Analyzer
+  </title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/extra.css') }}">
+  </head>
+<body style="background-color:linen;">
+  <header class="_demo--heading">
+    <div class="_demo--container">
+      <div class="wordmark">
+        <span class="wordmark--right">NAC</span>
+        <span class="wordmark--right">Emotion Analyzer</span>
+      </div>
+    </div>
+  </header>
+  <div class="_demo--banner banner">
+    <div class="_demo--container">
+      <div class="banner--service-container">
+        <div class="banner--service-icon-container">
+          <img class="banner--service-icon" src="{{url_for('static', filename='service-icon.svg')}}" alt="Tone Analyzer API Icon">
+        </div>
+        <div class="banner--service-info">
+          <h1 class="banner--service-title base--h1">
+              Tone Analyzer
+          </h1>
+          <div class="banner--service-description">
+            This service uses linguistic analysis to detect joy, fear, sadness, anger, analytical, confident and tentative tones found in text.
+          </div>
+        </div>
+      </div>
+     </div>
+    </div>
+  </div>
+  <div class="_demo--container">
+    <article class="_content base--article">
+      <div class="input">
+        <h2 class="base--h2">Sample use cases</h2>
+        <p class="base--p input--description">
+          Choose an example to learn how you can adjust the tone of your content to change people's perceptions, or improve its effectiveness.
+          </p>
+       <input role="radio" class="base--radio input--radio" type="radio" id="input-lang-fr" name="rb" value="review-fr">
+        <label class="base--inline-label input--radio-label" for="input-lang-fr">tweets</label>
+        <input role="radio" class="base--radio input--radio" type="radio" id="input-own-text" name="rb" value="own-text">
+        <label class="base--inline-label input--radio-label" for="input-own-text">Your own text</label>
+        <input type="file" id="myFile" name="filename">
+        <hr class="base--hr input--hr">
+        
+        <form class="panel" action="{{ url_for('emotion')}}" method = "POST">
+          <textarea class="base--textarea input--textarea" id="sentance" rows="7" name="sentance"></textarea>
+          <input class="base--button input--submit-button " type="submit" value = "Analyze"></input>
+        </form>
+
+        <!-- Flask data recieve -->
+        <div>
+          {% if form_data != ''%}
+          <p> {{form_data}}</p>
+          {% endif %}
+        </div>
+        
+      </div>
+      
+     
+</body>
+</html>
